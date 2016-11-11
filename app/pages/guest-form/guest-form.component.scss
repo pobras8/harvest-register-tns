@@ -1,0 +1,43 @@
+.form-container {
+  border-radius: 0.25rem;
+  padding: 20px;
+  background-color: rgba(#fff, 0.5);
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+.add-btn {
+    padding:0.15rem 0.25rem;
+    font-size:0.7rem;
+    margin:0 0 3px 5px;
+}
+.next-steps {
+  label {
+    margin-bottom: 0;
+    line-height: 1em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 0.9em;
+  }
+}
+input[type="checkbox"] {
+  margin-top: 0;
+  width: 16px;
+  height: 16px;
+}
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
+.prayer-req {
+  label {
+    margin-bottom: 0;
+    line-height: 1em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 0.9em;
+  }
+  input[type="radio"] {
+    margin-top: -0.25rem;
+  }
+}
+label { margin-bottom: 0; }
