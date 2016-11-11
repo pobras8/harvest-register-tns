@@ -2,9 +2,9 @@ import { Component, OnInit, trigger, state, style, transition, animate } from '@
 import { Validators, FormControl, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { Person } from '../shared/models/person';
-import { Address } from '../shared/models/address';
-import { PrayerRequest } from '../shared/models/prayer-request';
+import { Person } from '../../shared/models/person';
+import { Address } from '../../shared/models/address';
+import { PrayerRequest } from '../../shared/models/prayer-request';
 
 @Component({
   selector: 'app-guest-form',
