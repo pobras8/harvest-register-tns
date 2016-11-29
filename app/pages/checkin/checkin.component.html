@@ -1,39 +1,16 @@
-<Label text="Checkin Home!"></Label>
-<!-- <div class="checkin">
-    <div class="search-container">
-      <div class="form-group">
-        <input type="text" #searchInput class="form-control form-control-lg" (keyup)="onKey($event)" placeholder="Begin typing your name...">
-      </div>
-    </div>
-    <div class="results-container" *ngIf="showSearch">
-      <table class="table table-striped table-hover results">
-        <tbody>
-          <tr (click)="select('123')" [ngClass]="{'selected': selected.indexOf('123') != -1}">
-            <td>Patrick Obras</td>
-            <td>#123</td>
-            <img class="checkmark" src="./assets/checkmark-white.png" *ngIf="selected.indexOf('123') != -1" />
-          </tr>
-          <tr (click)="select('456')" [ngClass]="{'selected': selected.indexOf('456') != -1}">
-            <td style="padding-left:50px;">Jane Obras</td>
-            <td>#456</td>
-            <img class="checkmark" src="./assets/checkmark-white.png" *ngIf="selected.indexOf('456') != -1" />
-          </tr>
-          <tr (click)="select('789')" [ngClass]="{'selected': selected.indexOf('789') != -1}">
-            <td style="padding-left:50px;">John Obras</td>
-            <td>#789</td>
-            <img class="checkmark" src="./assets/checkmark-white.png" *ngIf="selected.indexOf('789') != -1" />
-          </tr>
-          <tr (click)="select('000')" [ngClass]="{'selected': selected.indexOf('000') != -1}">
-            <td>Conan O'Brien</td>
-            <td>#000</td>
-            <img class="checkmark" src="./assets/checkmark-white.png" *ngIf="selected.indexOf('000') != -1" />
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <button type="button" class="btn btn-lg btn-warning" style="margin:20px auto 0 auto; display:block;" *ngIf="selected.length > 0 && !confirmed" (click)="confirm()">Confirm</button>
-    <div *ngIf="confirmed" class="alert alert-success" style="margin:20px auto 0 auto; width:200px; text-align:center;" role="alert">
-        <img class="checkmark-success" src="./assets/checkmark-green.png"/>
-        <strong>Checked-In!</strong>
-    </div>
-</div> -->
+<StackLayout class="stack-container">
+    <WrapLayout orientation="horizontal">
+        <Label text="Harvest Check-in" class="title"></Label>
+        <Button text="First-Time Guest"></Button>
+    </WrapLayout>
+    <TextField hint="Begin typing your name..." autocorrect="false" autocapitalizationType="none" [(ngModel)]="search"></TextField>
+    <StackLayout width="600" *ngIf="names && names.length > 0">
+        <ListView [items]="names" (itemTap)="onItemTap($event)">
+            <template let-item="item" let-i="index" let-odd="odd" let-even="even">
+                <StackLayout [class.odd]="odd" [class.even]="even">
+                    <Label [text]='item.name'></Label>
+                </StackLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+</StackLayout>
