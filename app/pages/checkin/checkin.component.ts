@@ -21,6 +21,10 @@ export class CheckinComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToGuest() {
+      this.router.navigate(['/guest']);
+  }
+
   searchChange() {
       console.log(this.search);
       this.names.push({name:"Some Name"});

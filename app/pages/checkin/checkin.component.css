@@ -17,6 +17,18 @@ TextField {
     border-radius: 5;
 }
 
+.guest-btn {
+    font-size: 18;
+    background-color: #e4923b;
+    border-radius: 5;
+    border-width: 2;
+    border-color: #ccc;
+    opacity: 0.9;
+    color: white;
+    margin-left: 20;
+    height: 60;
+}
+
 /* .checkin {
    height: 500px;
  }

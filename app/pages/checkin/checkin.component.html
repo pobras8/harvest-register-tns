@@ -1,7 +1,7 @@
 <StackLayout class="stack-container">
     <WrapLayout orientation="horizontal">
         <Label text="Harvest Check-in" class="title"></Label>
-        <Button text="First-Time Guest"></Button>
+        <Button class="guest-btn" text="First-Time Guest" (tap)="goToGuest()"></Button>
     </WrapLayout>
     <TextField hint="Begin typing your name..." autocorrect="false" autocapitalizationType="none" [(ngModel)]="search"></TextField>
     <StackLayout width="600" *ngIf="names && names.length > 0">
